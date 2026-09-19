@@ -1,0 +1,18 @@
+<resources>
+    <!-- App display name -->
+    <string name="app_name">الفردوس</string>
+
+    <!-- TWA target URL — must match assetlinks.json domain exactly -->
+    <string name="twa_url">https://www.ferdaous-debila.com/dashboard</string>
+
+    <!-- Asset link host (no scheme, no path) -->
+    <string name="asset_statements">
+        [{
+            \"relation\": [\"delegate_permission/common.handle_all_urls\"],
+            \"target\": {
+                \"namespace\": \"web\",
+                \"site\": \"https://www.ferdaous-debila.com\"
+            }
+        }]
+    </string>
+</resources>

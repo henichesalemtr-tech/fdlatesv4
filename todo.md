@@ -1,0 +1,1 @@
+- [x] Correct the Git commit author identity so Vercel can match deployment commits to the authenticated GitHub account

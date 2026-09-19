@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mosque / Quran icon as vector drawable for launcher foreground -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- White mosque silhouette centered in the 108dp canvas -->
+    <!-- Main building body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,72 L84,72 L84,48 L66,48 L66,36 L54,24 L42,36 L42,48 L24,48 Z" />
+    <!-- Central dome -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,18 A14,14 0 0 1 68,32 L40,32 A14,14 0 0 1 54,18 Z" />
+    <!-- Left minaret -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,72 L18,44 L22,44 L22,72 Z" />
+    <!-- Left minaret top -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,44 A4,6 0 1 1 20,32 Z" />
+    <!-- Right minaret -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M86,72 L86,44 L90,44 L90,72 Z" />
+    <!-- Right minaret top -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M88,44 A4,6 0 1 1 88,32 Z" />
+    <!-- Door arch -->
+    <path
+        android:fillColor="#1a5c35"
+        android:pathData="M49,72 L49,56 A5,8 0 0 1 59,56 L59,72 Z" />
+    <!-- Ground line -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14,73 L94,73 L94,76 L14,76 Z" />
+
+</vector>

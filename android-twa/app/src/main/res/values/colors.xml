@@ -1,0 +1,6 @@
+<resources>
+    <!-- Ferdaous brand green (#1a5c35) -->
+    <color name="colorPrimary">#1a5c35</color>
+    <color name="colorSplash">#0a2b17</color>
+    <bool name="delegation_enabled">true</bool>
+</resources>

@@ -1,0 +1,17 @@
+# Build outputs
+build/
+app/build/
+
+# Local signing — keystore is injected by CI from KEYSTORE_BASE64 secret
+# Do NOT commit the actual keystore to the repository
+app/release.keystore
+app/*.jks
+
+# Local gradle files
+.gradle/
+local.properties
+
+# IDE
+.idea/
+*.iml
+.DS_Store

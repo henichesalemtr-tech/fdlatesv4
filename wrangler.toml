@@ -1,0 +1,16 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "ferdaous"
+main = ".open-next/worker.js"
+compatibility_date = "2025-03-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next/assets"
+binding   = "ASSETS"
+
+[vars]
+VAPID_SUBJECT = "mailto:contact@ferdaou-debila.com"
+[[hyperdrive]]
+binding = "HYPERDRIVE"
+id = "d789f4ade0f642259a33c78e1d2c28f9"
+localConnectionString = "postgresql://user:password@localhost:5432/localdb" # Optional: for local development

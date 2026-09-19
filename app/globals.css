@@ -1,0 +1,134 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.97 0.002 247);
+  --foreground: oklch(0.2 0.01 247);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.01 247);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.01 247);
+  --primary: oklch(0.32 0.08 160);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.96 0.005 247);
+  --secondary-foreground: oklch(0.25 0.01 247);
+  --muted: oklch(0.95 0.005 247);
+  --muted-foreground: oklch(0.55 0.01 247);
+  --accent: oklch(0.95 0.005 247);
+  --accent-foreground: oklch(0.25 0.01 247);
+  --destructive: oklch(0.58 0.22 27);
+  --border: oklch(0.9 0.005 247);
+  --input: oklch(0.9 0.005 247);
+  --ring: oklch(0.32 0.08 160);
+  --radius: 0.5rem;
+
+  /* Islamic green theme */
+  --green-dark: #1a5c35;
+  --green-mid: #2d7a4a;
+  --green-light: #4a9e6b;
+  --red-action: #e53e3e;
+  --gold: #d4a017;
+}
+
+* {
+  direction: rtl;
+}
+
+body {
+  font-family: var(--font-cairo), 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-weight: 400;
+}
+
+* {
+  font-family: inherit;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background: linear-gradient(180deg, #1a5c35 0%, #0f3d22 100%);
+  min-height: 100vh;
+  width: 240px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  border-radius: 6px;
+  margin: 2px 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.sidebar-link.active {
+  background: rgba(255,255,255,0.2);
+  color: #ffd700;
+  font-weight: 600;
+}
+
+/* Status badges */
+.badge-active { background: #198754; color: white; }
+.badge-waiting { background: #ffc107; color: #333; }
+.badge-withdrawn { background: #dc3545; color: white; }
+.badge-graduated { background: #0d6efd; color: white; }
+.badge-available { background: #198754; color: white; }
+.badge-occupied { background: #ffc107; color: #333; }
+.badge-maintenance { background: #6c757d; color: white; }
+
+/* Print styles for ID cards */
+@media print {
+  .no-print { display: none !important; }
+  .id-card { page-break-inside: avoid; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #2d7a4a; border-radius: 3px; }
+
+/* ====== ID CARDS PRINT: 8 per A4 sheet (4 columns x 2 rows) ====== */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white !important; font-family: 'Cairo', sans-serif !important; }
+
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+
+  /* ID cards grid for printing */
+  .id-cards-print-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 5mm !important;
+    width: 100% !important;
+  }
+
+  .id-card {
+    width: 100% !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    border: 1.5px solid currentColor !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Student profile print */
+  .student-profile-print {
+    max-width: 100% !important;
+  }
+}
+

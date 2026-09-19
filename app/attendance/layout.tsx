@@ -1,0 +1,16 @@
+export const dynamic = 'force-dynamic'
+
+import { redirect } from 'next/navigation'
+import { getSession } from '@/lib/auth'
+import MobileLayout from '@/components/MobileLayoutClient'
+
+export default async function Layout({ children }: { children: React.ReactNode }) {
+  const session = await getSession()
+  if (!session) redirect('/login')
+  if (session.role === 'guardian') redirect('/guardian-dashboard')
+  return (
+    <MobileLayout role={(session.role === 'admin' ? 'admin' : 'teacher') as 'admin' | 'teacher'} fullName={session.fullName}>
+      {children}
+    </MobileLayout>
+  )
+}

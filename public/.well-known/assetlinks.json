@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.ferdaous.app",
+    "sha256_cert_fingerprints": [
+      "72:6E:0A:7E:72:EA:11:A4:6A:6A:54:C6:6A:B6:42:BB:46:26:29:28:64:A3:E7:25:3D:2E:83:2B:1F:99:6A:43"
+    ]
+  }
+}]

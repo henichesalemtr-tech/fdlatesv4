@@ -1,0 +1,11 @@
+# Treat gradle wrapper jar as binary to prevent line-ending corruption
+gradle/wrapper/gradle-wrapper.jar binary
+
+# Normalize line endings for shell scripts
+gradlew text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Treat keystore as binary
+*.keystore binary
+*.jks binary
