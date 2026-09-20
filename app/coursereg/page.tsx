@@ -45,7 +45,7 @@ export default function CourseRegPage() {
 
   async function submit() {
     if (!selectedCourse) { setError('الرجاء اختيار الدورة'); return }
-    if (!form.firstName.trim() || !form.lastName.trim()) { setError('الاسم الأول والأخير مطلوبان'); return }
+    if (!form.firstName.trim() || !form.lastName.trim()) { setError('الاسم واللقب مطلوبان'); return }
     setError(null)
     setSubmitting(true)
     try {
